@@ -43,9 +43,8 @@
             <!-- <version>2.53.1</version> -->
             <!-- 19/October.2016
                 have upgraded to 3.0.1 for MyFirstTest -->
-			<version>3.3.1</version>
+			<version>3.0.1</version>
         </dependency>
-
 
         <dependency>
             <groupId>junit</groupId>
@@ -53,6 +52,20 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>htmlunit-driver</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
+
     </dependencies>
 
 </project>
