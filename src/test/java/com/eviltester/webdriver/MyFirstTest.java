@@ -18,16 +18,20 @@ public class MyFirstTest {
          * And on
          *     - WebDriver 3
          *     - Firefox 48+
-         *     - with geckodriver.exe on the path
+         *     - geckodriver.exe on the path
          */
 
-        WebDriver driver = new FirefoxDriver();
+        //the below recommendation came from http://stackoverflow.com/questions/38751525/firefox-browser-is-not-opening-with-selenium-webbrowser-code
+        WebDriver driver;
+        System.setProperty("webdriver.gecko.driver", "/usr/local/Cellar/geckodriver/0.11.1/bin/geckodriver");
+        driver = new FirefoxDriver();
 
         driver.navigate().to("http://seleniumsimplified.com");
 
         Assert.assertTrue("title should start differently",
                             driver.getTitle().startsWith("Selenium Simplified"));
 
+        System.out.println();
         driver.close();
         driver.quit();
     }
